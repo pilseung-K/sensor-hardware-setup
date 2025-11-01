@@ -24,9 +24,37 @@ Alvium 1800 U-319 (USB Series)
 
 
 **소프트웨어 세팅**<br>
-환경은 ROS2 humble
-Download Vimba X SDK 설치
-
 * **Vimba X SDK 다운로드:** [Allied Vision 공식 다운로드 페이지로 이동](https://www.alliedvision.com/en/products/software/vimba-x-sdk/)
 
-      cd Downloads
+```bash
+# 1. 다운로드 폴더로 이동 (다운로드 파일이 여기 있다고 가정)
+cd Download
+
+# 2. SDK 파일을 /opt 디렉토리에 관리자 권한으로 압축 해제
+sudo tar -xzf VimbaX_Setup-2025-2-Linux64.tar.gz -C /opt
+
+# 3. CTI 폴더로 이동하여 GenTL 환경 설정 스크립트 실행
+cd /opt/VimbaX_2025-2/cti
+sudo bash ./Install_GenTL_Path.sh
+
+# 4. 시스템 재부팅 (환경 변수 완전 적용)
+sudo reboot
+
+# 5. GenTL 환경 변수가 올바르게 설정되었는지 확인 (선택 사항)
+echo "$GENICAM_GENTL64_PATH"
+
+# 6. Vimba X Viewer 실행하여 카메라 연결 및 이미지 확인
+/opt/VimbaX_2025-2/bin/VimbaXViewer
+```
+**Vimba X ROS2 driver**<br>
+#### 3.1 ROS 2 Humble 설치 가이드
+
+* **운영체제:** Ubuntu 22.04 LTS (Jammy Jellyfish)
+* **공식 설치 문서:** [ROS 2 Humble 공식 설치 페이지로 이동](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
+
+#### 3.2 Vimba ROS 2 드라이버 설치 가이드
+
+이 저장소는 Allied Vision에서 공식 제공하는 ROS 2 드라이버를 사용합니다.
+
+* **Vimba ROS 2 드라이버 Git 저장소:** [VimbaX ROS 2 Driver Git 저장소로 이동](https://github.com/alliedvision/vimbax_ros2_driver)
+* **릴리스 (Release) 설치 파일:** [Vimba X ROS 2 Driver v1.0.0 릴리스 페이지](https://github.com/alliedvision/vimbax_ros2_driver/releases/tag/v1.0.0)
