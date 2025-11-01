@@ -1,5 +1,4 @@
-Vimba SDK Camera Setup Guide (Allied Vision GT/U-Series)
-
+Vimba SDK Camera Setup Guide (Allied Vision GT/U-Series)<br>
 Allied Vision사의 **GigE Vision (GT 시리즈)** 및 **USB3 Vision (U 시리즈)** 카메라의 하드웨어 설정, 드라이버 설치 및 초기 코드를 다룹니다.
 
 **하드웨어 세팅**<br>
@@ -21,3 +20,13 @@ Alvium 1800 U-319 (USB Series)
 | **인터페이스** | **USB3 Vision** |
 | **데이터 및 전원 공급** | **USB 3.0 케이블** |
 | **권장 케이블** | **USB Standard-A to Micro-B (잠금 나사 타입 권장)** |
+
+
+
+**소프트웨어 세팅**<br>
+환경은 ROS2 humble
+Download Vimba X SDK 설치
+
+* **Vimba X SDK 다운로드:** [Allied Vision 공식 다운로드 페이지로 이동](https://www.alliedvision.com/en/products/software/vimba-x-sdk/)
+
+      cd Downloads
