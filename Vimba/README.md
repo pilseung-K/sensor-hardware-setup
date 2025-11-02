@@ -58,3 +58,20 @@ echo "$GENICAM_GENTL64_PATH"
 
 * **Vimba ROS 2 드라이버 Git 저장소:** [VimbaX ROS 2 Driver Git 저장소로 이동](https://github.com/alliedvision/vimbax_ros2_driver)
 * **릴리스 (Release) 설치 파일:** [Vimba X ROS 2 Driver v1.0.0 릴리스 페이지](https://github.com/alliedvision/vimbax_ros2_driver/releases/tag/v1.0.0)
+
+**2.4 Python 환경 설정 및 라이브러리 설치**<br>
+Vimba 카메라를 Python에서 제어하기 위해서는 Vimba Python 라이브러리가 필요합니다.
+
+```bash
+# 1. Python 가상 환경 (Virtual Environment) 생성 및 활성화 (선택 사항)
+# python3 -m venv vmbpy_env
+# source vmbpy_env/bin/activate
+
+# 2. Vimba Python 라이브러리 설치
+pip install vmbpy
+
+# 3. 설치 확인 및 테스트 (Python 인터프리터)
+# python3
+# >>> import vmbpy
+# >>> print(vmbpy.__version__)
+```
